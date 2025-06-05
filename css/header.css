@@ -38,15 +38,25 @@
   align-items: center;
 }
 
+.header_top_scroll {
+  padding: 0;
+}
+
 .header_top_left {
+  position: relative;
   display: flex;
   align-items: center;
   gap: 12px;
 }
+
 .logo {
   width: 144px;
   height: 22px;
 }
+.logo_hide {
+  display: none;
+}
+
 .search {
   width: 355px;
   height: 46px;
@@ -59,6 +69,13 @@
   display: flex;
   align-items: center;
 }
+
+.search_scroll {
+  position: absolute;
+  left: 190px;
+  top: 8px;
+}
+
 .search form {
   flex: 1;
 
@@ -80,16 +97,25 @@
   height: 50px;
 }
 
+.sale_hide {
+  display: none;
+}
+
 .sale img {
   width: 100%;
   height: auto;
 }
 .header_top_right {
 }
+
 .link_site {
   display: flex;
   align-items: center;
   gap: 20px;
+}
+
+.link_site_hide {
+  display: none;
 }
 
 .link_site li {
@@ -154,6 +180,10 @@
   gap: 10px;
   font-size: 12px;
   font-weight: 600;
+}
+
+.height_62 {
+  height: 62px !important;
 }
 
 /* 모바일메뉴 */
