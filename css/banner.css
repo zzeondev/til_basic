@@ -15,7 +15,6 @@
   overflow: hidden;
 
   height: 345px;
-  background-color: red;
   border-radius: 15px;
 }
 
@@ -27,7 +26,6 @@
 }
 
 .banner_slide_prev {
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -55,7 +53,6 @@
 }
 
 .banner_slide_next {
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -78,6 +75,7 @@
   border-radius: 50%;
 }
 
+/* 처음에는 페이지네이션이 안보인다. */
 .banner_slide_pg {
   display: none;
 }
@@ -87,18 +85,57 @@
     height: 275px;
   }
 }
-
 @media all and (max-width: 1024px) {
-  .sw_banner {
-    max-width: 350px;
-  }
   .banner_slide_item {
     height: 202px;
+  }
+  /* 다중으로 선택함(,로 구분함) */
+  .banner_slide_next,
+  .banner_slide_prev {
+    display: none;
+  }
+  /* 페이지네이션이 보여야 함. */
+  .banner_slide_pg {
+    display: flex;
+    justify-content: center;
+
+    padding-top: 10px;
+  }
+  /* 기본 버튼들의 모양 css */
+  .banner_slide_pg .swiper-pagination-bullet {
+  }
+  /* 포커스 된 버튼의 모양 css */
+  .banner_slide_pg .swiper-pagination-bullet-active {
+    background-color: #000000;
   }
 }
 
 @media all and (max-width: 760px) {
   .sw_banner {
     max-width: 350px;
+  }
+  /* 페이지네이션 위치 조절 */
+  .banner_slide_pg {
+    align-items: center;
+
+    padding-top: 0px;
+    /* 위치말고 내용물만 이동함 */
+    transform: translateY(-15px);
+    /* z-index가 안되는 경우는 position 이 없어서 */
+    position: relative;
+    z-index: 100;
+  }
+  .banner_slide_pg .swiper-pagination-bullet {
+    background-color: #ffffff;
+    opacity: 0.6;
+    width: 6px;
+    height: 6px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  .banner_slide_pg .swiper-pagination-bullet-active {
+    background-color: #ffffff;
+    opacity: 1;
+    width: 8px;
+    height: 8px;
   }
 }

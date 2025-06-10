@@ -94,11 +94,25 @@ window.addEventListener("DOMContentLoaded", function () {
       nextEl: ".banner_slide_next",
       prevEl: ".banner_slide_prev",
     },
+    pagination: {
+      el: ".banner_slide_pg",
+      clickable: true,
+    },
     breakpoints: {
-      768: {
+      760: {
         slidesPerView: 2,
         spaceBetween: 25,
       },
     },
+  });
+  // 아래 코드는 별도로 작성을 한 것입니다. (보관)
+  const banner = document.querySelector(".sw_banner");
+  // 배너 영역에 마우스가 걸친다면
+  banner.addEventListener("mouseenter", function () {
+    swiper.autoplay.stop();
+  });
+  // 배너 영역에 마우스가 빠져나간다면
+  banner.addEventListener("mouseleave", function () {
+    swiper.autoplay.start();
   });
 });
