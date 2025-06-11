@@ -979,6 +979,13 @@ window.addEventListener("load", function () {
 
 - 좌측, 우측 슬라이드 이동
 - 첫 페이지와, 마지막 페이지에서 버튼 숨기기 적용
+- 원본 Swiper 예제의 버튼의 클래스 명을 꼭 알아내서 활용하자.
+
+```css
+.swiper-button-disabled {
+  display: none !important;
+}
+```
 
 ```js
 navigation: {
