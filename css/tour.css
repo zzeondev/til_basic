@@ -2,10 +2,10 @@
   position: relative;
 }
 .layout {
-  max-width: 1280px;
-  width: 100%;
   /* 영역 가운데 정렬 */
   margin: 0 auto;
+  width: 100%;
+  max-width: 1280px;
 }
 .tour_top {
   padding-top: 65px;
@@ -17,17 +17,17 @@
 }
 
 .title {
-  text-align: center;
   font-size: 28px;
   font-weight: 600;
   color: #000;
+  text-align: center;
 }
 .subtitle {
-  text-align: center;
-  color: rgba(18, 18, 18, 0.5);
+  margin-bottom: 20px;
   font-size: 18px;
   font-weight: 400;
-  margin-bottom: 20px;
+  color: rgba(18, 18, 18, 0.5);
+  text-align: center;
 }
 
 .tour_top_category {
@@ -43,22 +43,21 @@
   display: block;
 }
 .tour_button_list li button {
-  border-radius: 22px;
+  padding: 0 18px;
   border: 1px solid #e5e5e5;
   /* padding: 11px 16px; */
   height: 44px;
-  padding: 0 18px;
   background-color: #fff;
   cursor: pointer;
+  border-radius: 22px;
 }
 .tour_button_list li button:active {
   opacity: 0.65;
 }
-
 .tour_focus {
   background-color: #333 !important;
-  color: #fff !important;
   font-weight: 600;
+  color: #fff !important;
 }
 
 .tour_bottom {
@@ -66,8 +65,8 @@
   width: 100%;
 }
 .tour_slide_wrap {
-  position: relative;
   display: block;
+  position: relative;
   width: 100%;
 }
 .tour_slide {
@@ -76,9 +75,9 @@
 }
 .tour_item {
   display: block;
+  overflow: hidden;
   height: 365px;
   border-radius: 12px;
-  overflow: hidden;
 }
 
 .tour_item_image {
@@ -91,33 +90,103 @@
   object-fit: cover;
 }
 .tour_item_info {
-  position: relative;
+  /* 전체높이에서 픽셀을 뺌 */
+  height: calc(100% - 255px);
   padding: 20px;
+  position: relative;
+  border: 1px solid #f0f0f0;
+  border-top: none;
+  border-radius: 0px 0px 12px 12px;
 }
-.tour_item_info .city {
-  position: absolute;
-  left: 20px;
-  top: 0;
-  transform: translateY(-50%);
-  background-color: #4154ff;
-  color: #fff;
-  font-size: 13px;
+.tour_item_info .tour_city {
   padding: 5px 10px;
+  position: absolute;
+  top: 0;
+  left: 20px;
+  background-color: #4154ff;
+  font-size: 13px;
+  color: #fff;
+  transform: translateY(-50%);
   border-radius: 4px;
 }
-
-.tour_item_info .sale {
+.tour_item_info .tour_sale {
+  font-size: 15px;
+  font-weight: 400;
+  color: rgb(65, 84, 255);
 }
-.tour_item_info .item_title {
+/* 한줄 말줄임 ...은 css 작업합니다 */
+/* 한줄 이상 말줄임 ...은 css 작업합니다 */
+.tour_item_info .tour_item_title {
+  font-size: 15px;
+  font-weight: 400;
+  color: #333;
+  /* 아래는 보관해 두세요. */
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
-.tour_item_info .price {
+.tour_item_info .tour_price {
+  color: #111;
+  font-size: 20px;
+  font-weight: 400;
+}
+.tour_item_info .tour_price b {
+  font-weight: 700;
 }
 
 .tour_slide_prev {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%) translateX(-50%);
+
+  width: 48px;
+  height: 48px;
+  border-radius: 24px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1px solid #e5e5e5;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.13);
+  cursor: pointer;
 }
-.tour_slide__next {
+/* 위치는 그대로 내용만 반전 */
+.tour_slide_prev img {
+  transform: rotate(180deg);
+}
+.tour_slide_next {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  /* translate (X, Y) */
+  transform: translateY(-50%) translateX(50%);
+
+  width: 48px;
+  height: 48px;
+  border-radius: 24px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1px solid #e5e5e5;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.13);
+  cursor: pointer;
 }
 .tour_more {
+  padding-top: 50px;
+  /* inline 요소(=글자처럼 취급)를 가운데 정렬할 때는 text-align:center 또는
+    display:flex; justify-contents:center 아래처럼 필요에 의해서 모두 쓰기도 함*/
+  text-align: center;
+  display: flex;
+  justify-content: center;
 }
 .tour_more_bt {
+  display: flex;
+  align-items: center;
+  /* 사이에 여백 gap */
+  gap: 7px;
+  height: 56px;
+  border-radius: 23px;
+  padding: 0 20px;
+
+  border: 1px solid #e5e5e5;
+  background-color: #fff;
+  font-size: 16px;
+  color: #333;
+  font-weight: 700;
 }
