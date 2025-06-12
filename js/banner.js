@@ -74,7 +74,7 @@ window.addEventListener("DOMContentLoaded", function () {
     `;
   }
 
-  console.log(htmlTag);
+  // console.log(htmlTag);
 
   // html 장소에 배치하기
   bannerPos.innerHTML = htmlTag;
