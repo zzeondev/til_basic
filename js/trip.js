@@ -5,8 +5,8 @@ window.addEventListener("load", function () {
     spaceBetween: 10,
     slidesPerGroup: 1,
     navigation: {
-      nextEl: ".trip_slide_prev",
-      prevEl: ".trip_slide_next",
+      nextEl: ".trip_slide_next",
+      prevEl: ".trip_slide_prev",
     },
 
     breakpoints: {

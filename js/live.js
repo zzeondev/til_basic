@@ -6,8 +6,8 @@ window.addEventListener("load", function () {
     slidesPerGroup: 4,
 
     navigation: {
-      nextEl: ".live_slide_prev",
-      prevEl: ".live_slide_next",
+      nextEl: ".live_slide_next",
+      prevEl: ".live_slide_prev",
     },
 
     breakpoints: {
