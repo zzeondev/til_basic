@@ -1,21 +1,19 @@
 window.addEventListener("load", function () {
-  new Swiper(".sw_live", {
+  new Swiper(".sw_ticket", {
     slidesPerView: 8,
     spaceBetween: 10,
     slidesPerGroup: 4,
-
     navigation: {
-      nextEl: ".live_slide_next",
-      prevEl: ".live_slide_prev",
+      nextEl: ".ticket_slide_next",
+      prevEl: ".ticket_slide_prev",
     },
-
     breakpoints: {
       960: {
         slidesPerView: 2,
         spaceBetween: 20,
       },
-      1024: {
-        slidesPerView: 3,
+      760: {
+        slidesPerView: 2,
         spaceBetween: 20,
       },
       1280: {
