@@ -1,15 +1,26 @@
 .live {
-  padding-top: 30px;
+  padding-top: 60px;
   position: relative;
 }
 .layout {
   position: relative;
 }
 .live_header {
-  padding-bottom: 25px;
+  padding-bottom: 20px;
   position: relative;
 }
-.live_title {
+.live_header_title {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.live_header_text {
+  padding-top: 15px;
+  font-size: 18px;
+  font-weight: 400;
+  color: rgba(18, 18, 18, 0.5);
   text-align: center;
 }
 .live_slide_wrap {
@@ -23,7 +34,12 @@
   position: relative;
   display: block;
   width: 100%;
-  height: 455px;
+
+  max-height: 450px;
+  min-height: 286px;
+
+  height: 35.156vw;
+
   border-radius: 11px;
   overflow: hidden;
 }
@@ -45,7 +61,13 @@
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background: linear-gradient(
+      0deg,
+      rgba(34, 34, 34, 0.5),
+      rgba(34, 34, 34, 0.5)
+    ),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.4) 18.65%, transparent 39.78%),
+    linear-gradient(180deg, transparent 56.75%, rgba(0, 0, 0, 0.4) 87.59%);
 }
 .live_info {
   position: absolute;
@@ -53,23 +75,92 @@
   top: 0;
   width: 100%;
   height: 100%;
-  padding: 20px;
+  padding: 25px;
 }
 .live_state {
+  display: flex;
 }
 .live_wait {
-}
-.live_item_title {
-}
-.live_day {
-}
-.live_day_date {
-}
-.live_day_time {
-}
-.live_deiail {
+  display: flex;
+  align-items: center;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  height: 32px;
+  border-radius: 16px;
+  padding: 0 15px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
+.live_item_title {
+  padding: 5px 0;
+
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+
+  line-height: 1.6;
+}
+.live_day {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+.live_day_date {
+  font-size: 28px;
+  color: #fff;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+}
+.live_day_time {
+  font-size: 50px;
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+}
+
+.live_detail {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  color: #fff;
+  padding: 25px;
+
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.live_detail_image {
+  width: 65px;
+  height: 65px;
+  border-radius: 2px;
+  overflow: hidden;
+}
+.live_detail_image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.live_detail_title {
+  flex: 1;
+  height: 65px;
+  padding-top: 15px;
+  color: #fff;
+  font-size: 15px;
+}
 .live_slide_prev {
   display: flex;
   align-items: center;
@@ -130,5 +221,44 @@
   color: #333;
   border-radius: 23px;
 
-  font: 16px;
+  font-size: 16px;
+}
+
+@media all and (max-width: 1024px) {
+  .live {
+    border-top: 8px solid #f0f4f4;
+    padding-top: 20px;
+  }
+  .live_info {
+    padding: 10px;
+  }
+  .live_wait {
+    font-size: 10px;
+    font-weight: 400;
+    padding: 0 10px;
+    height: 20px;
+  }
+  .live_item_title {
+    font-size: 14px;
+  }
+  .live_day_date {
+    font-size: 18px;
+  }
+  .live_day_time {
+    font-size: 30px;
+  }
+  .live_detail {
+    padding: 10px;
+  }
+  .live_detail_image {
+    width: 40px;
+    height: 40px;
+  }
+  .live_detail_title {
+    font-size: 13px;
+  }
+  .live_more_bt {
+    width: 100%;
+    border-radius: 4px;
+  }
 }

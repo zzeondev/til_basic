@@ -21,7 +21,7 @@
   font-weight: 400;
   color: rgba(18, 18, 18, 0.5);
   text-align: center;
-  font: 18px;
+  font-size: 18px;
 }
 .trip_slide_wrap {
   position: relative;
@@ -34,12 +34,10 @@
   position: relative;
   display: block;
   width: 100%;
-  height: 400px;
 }
 
 .trip_image {
   height: 245px;
-
   border-radius: 11px 11px 0 0;
   overflow: hidden;
 }
@@ -134,7 +132,11 @@
   font-size: 20px;
   font-weight: 700;
 }
-
+.trip_price .m_line {
+  text-decoration: line-through;
+  color: #999;
+  font-size: 13px;
+}
 .trip_slide_prev {
   display: flex;
   align-items: center;
@@ -196,5 +198,74 @@
   color: #333;
   border-radius: 23px;
 
-  font: 16px;
+  font-size: 16px;
+}
+
+/* 반응형 */
+@media all and (max-width: 1280px) {
+}
+@media all and (max-width: 1080px) {
+}
+@media all and (max-width: 1024px) {
+  .trip {
+    border-top: 8px solid #f0f4f4;
+    padding-top: 30px;
+  }
+  .trip_header {
+    padding-bottom: 15px;
+  }
+  .trip_header_title {
+    gap: 5px;
+  }
+  .trip_header_title img:first-child {
+    width: 69px;
+  }
+  .trip_header_title img:last-child {
+    width: 25px;
+  }
+  .trip_header_text {
+    font-size: 15px;
+    padding-top: 10px;
+  }
+  /* 트릭 swiper 의 visivile 속성 바꿈 */
+  .sw_trip {
+    overflow: visible !important;
+  }
+  /* 트릭 swiper 의 너비를 강제 조절 */
+  .sw_trip .swiper-slide {
+    width: 230px !important;
+  }
+
+  .trip_image {
+    height: 140px;
+  }
+  .trip_info {
+    padding: 15px;
+    padding-bottom: 13px;
+  }
+  .trip_item_title {
+    font-size: 15px;
+  }
+  .trip_schedule {
+    font-size: 13px;
+    display: flex;
+    /* flex 요소들을 배치하다가 줄내림 하라! */
+    flex-wrap: wrap;
+  }
+  .trip_more_bt {
+    width: 100%;
+    border-radius: 4px;
+    height: 50px;
+  }
+  .trip_slide_next,
+  .trip_slide_prev {
+    display: none;
+  }
+  .trip_footer {
+    padding: 20px 0;
+  }
+}
+@media all and (max-width: 960px) {
+}
+@media all and (max-width: 760px) {
 }

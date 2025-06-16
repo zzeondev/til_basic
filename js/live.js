@@ -1,8 +1,8 @@
 window.addEventListener("load", function () {
   new Swiper(".sw_live", {
-    slidesPerView: 8,
+    slidesPerView: 3,
     spaceBetween: 10,
-    slidesPerGroup: 4,
+    slidesPerGroup: 1,
 
     navigation: {
       nextEl: ".live_slide_next",
@@ -10,10 +10,6 @@ window.addEventListener("load", function () {
     },
 
     breakpoints: {
-      960: {
-        slidesPerView: 2,
-        spaceBetween: 20,
-      },
       1024: {
         slidesPerView: 3,
         spaceBetween: 20,

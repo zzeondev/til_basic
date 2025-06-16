@@ -2,7 +2,7 @@ window.addEventListener("load", function () {
   // 카테고리 버튼 클릭하면 포커스 클래스 이동하기
   // 포커스 되었을 때 적용될 포커스 이름
   const focusName = "tour_focus";
-  const bts = this.document.querySelectorAll(".tour_button_list li button");
+  const bts = document.querySelectorAll(".tour_button_list li button");
   // 태그 등의 DOM 들을 모아둔 배열을 다룰때 추천 반복 문법
   bts.forEach(function (item) {
     item.addEventListener("click", function () {
@@ -154,7 +154,7 @@ window.addEventListener("load", function () {
   swTourPos.innerHTML = htmlTag;
 
   new Swiper(".sw_tour", {
-    slidesPerView: 5,
+    slidesPerView: 3,
     grid: {
       rows: 2,
       fill: "row",
@@ -169,7 +169,7 @@ window.addEventListener("load", function () {
 
     // 반응형
     breakpoints: {
-      1024: {
+      1025: {
         slidesPerView: 2,
         slidesPerGroup: 2,
         spaceBetween: 26,
