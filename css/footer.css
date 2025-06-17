@@ -1,0 +1,137 @@
+.footer {
+  padding-top: 60px;
+}
+.layout {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.footer_top {
+  border-top: 1px solid #e4e4e4;
+}
+.footer_menu_list {
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* '>' 경로 선택 */
+.footer_menu_list > li {
+  position: relative;
+}
+.footer_menu_list > li:last-child::after {
+  display: none;
+}
+.footer_menu_list > li::after {
+  content: "";
+  position: absolute;
+  right: -33px;
+  top: 4px;
+  display: block;
+  width: 1px;
+  height: 12px;
+  background-color: #ccc;
+}
+.footer_menu_list > li > a {
+  position: relative;
+  font-size: 13px;
+  color: #29292d;
+  font-weight: 400;
+}
+.footer_menu_list > li > a > strong {
+  font-weight: 700;
+}
+.footer_more {
+  position: relative;
+  font-size: 13px;
+  color: #29292d;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+}
+.footer_more > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.footer_more > span > img {
+  transform: scale(0.75) rotate(90deg);
+}
+
+.footer_more:hover .more_list {
+  display: block;
+}
+.more_box {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-top: 30px;
+}
+
+.more_list {
+  display: none;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px 15px;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.2);
+}
+.more_list li {
+}
+.more_list li a {
+  font-size: 13px;
+  color: #333;
+  white-space: nowrap;
+  line-height: 1.6;
+}
+
+/* 하단 메뉴 바 반응형 코드 */
+@media all and (max-width: 1280px) {
+}
+@media all and (max-width: 1250px) {
+  .footer_menu_list > li::after {
+    right: -26px;
+  }
+}
+@media all and (max-width: 1200px) {
+  .footer_menu_list > li::after {
+    right: -26px;
+  }
+}
+@media all and (max-width: 1140px) {
+  .footer_menu_list > li::after {
+    right: -26px;
+  }
+}
+@media all and (max-width: 1024px) {
+  .footer_top {
+    display: none;
+  }
+  .footer_bottom {
+    display: none;
+  }
+}
+
+/*  footer 하단 */
+.footer_bottom {
+  border-top: 1px solid #e4e4e4;
+}
+.footer_contact {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 0px;
+}
+.footer_contact_box {
+}
+.footer_contact_box > h3 {
+}
+
+.footer_contact_box > ul {
+}
+.footer_contact_box > ul > li {
+}
+.footer_copyright {
+}
