@@ -193,7 +193,7 @@ window.addEventListener("load", function () {
   new Swiper(".sw_live", {
     slidesPerView: 3,
     spaceBetween: 10,
-    slidesPerGroup: 1,
+    slidesPerGroup: 4,
 
     navigation: {
       nextEl: ".live_slide_next",

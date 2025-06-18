@@ -199,7 +199,7 @@ window.addEventListener("load", function () {
   new Swiper(".sw_ticket", {
     slidesPerView: 3,
     spaceBetween: 10,
-    slidesPerGroup: 1,
+    slidesPerGroup: 4,
     navigation: {
       nextEl: ".ticket_slide_next",
       prevEl: ".ticket_slide_prev",
