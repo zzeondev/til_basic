@@ -7,6 +7,8 @@
   margin: 0 auto;
 }
 .footer_top {
+  position: relative;
+  z-index: 888;
   border-top: 1px solid #e4e4e4;
 }
 .footer_menu_list {
@@ -88,33 +90,6 @@
   line-height: 1.6;
 }
 
-/* 하단 메뉴 바 반응형 코드 */
-@media all and (max-width: 1280px) {
-}
-@media all and (max-width: 1250px) {
-  .footer_menu_list > li::after {
-    right: -26px;
-  }
-}
-@media all and (max-width: 1200px) {
-  .footer_menu_list > li::after {
-    right: -26px;
-  }
-}
-@media all and (max-width: 1140px) {
-  .footer_menu_list > li::after {
-    right: -26px;
-  }
-}
-@media all and (max-width: 1024px) {
-  .footer_top {
-    display: none;
-  }
-  .footer_bottom {
-    display: none;
-  }
-}
-
 /*  footer 하단 */
 .footer_bottom {
   border-top: 1px solid #e4e4e4;
@@ -147,4 +122,96 @@
   margin-bottom: 4px;
 }
 .footer_copyright {
+  font-size: 12px;
+  color: #9c9793;
+  padding-bottom: 45px;
+}
+
+.footer_copyright p {
+  margin-bottom: 4px;
+}
+
+/* 하단 메뉴 바 반응형 코드 */
+@media all and (max-width: 1280px) {
+}
+@media all and (max-width: 1250px) {
+  .footer_menu_list > li::after {
+    right: -26px;
+  }
+}
+@media all and (max-width: 1200px) {
+  .footer_menu_list > li::after {
+    right: -26px;
+  }
+}
+@media all and (max-width: 1140px) {
+  .footer_menu_list > li::after {
+    right: -26px;
+  }
+}
+@media all and (max-width: 1024px) {
+  .footer_top {
+    display: none;
+  }
+}
+
+/* 모바일: 하단 */
+.mb_footer {
+  background-color: #f7f7f8;
+  padding: 20px;
+}
+.mb_footer_menu {
+}
+.mb_footer_menu nav {
+  display: flex;
+  align-items: center;
+  margin-bottom: 4px;
+}
+.mb_footer_menu nav a {
+  font-size: 12px;
+  color: #7c7c86;
+}
+.bar {
+  display: block;
+  width: 1px;
+  height: 12px;
+  background-color: #e2e2e4;
+  margin: 0 12px;
+}
+.mb_footer_info {
+}
+.mb_footer_link {
+  margin-top: 20px;
+  display: inline-flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 31px;
+  padding: 15px;
+}
+.circle {
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #d9d9d9;
+  margin: 0 18px;
+}
+.mb_footer_copy {
+  color: #bfbfc0;
+  font-size: 10px;
+  padding-top: 10px;
+
+  padding-bottom: 40px;
+}
+.mb_footer_hide {
+  /* display: none; */
+}
+#mb_bt {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+#mb_bt i {
+}
+#mb_bt i img {
 }
