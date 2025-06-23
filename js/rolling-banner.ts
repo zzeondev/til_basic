@@ -1,5 +1,5 @@
 // 파일 로딩 완료시 실행
-window.addEventListener("load", function () {
+window.addEventListener("load", (): void => {
   // 배너 데이터
 
   type BannerDataType = {
@@ -38,37 +38,37 @@ window.addEventListener("load", function () {
   let startIndex: number = 0;
   let totalCount: number = bannerApiData.length;
 
-  // 타이머 만들기
-  let bannerTimer = setInterval(function () {
+  /**
+   * 배너가 변경되는 기능
+   * 사용법 : bannerChange()
+   */
+  const bannerChange = (): void => {
     startIndex = startIndex + 1;
     if (startIndex >= totalCount) {
       startIndex = 0;
     }
+
     if (bannerAnchorTag) {
       bannerAnchorTag.href = bannerApiData[startIndex].link;
     }
+
     if (bannerImgTag) {
       bannerImgTag.src = bannerApiData[startIndex].image;
       bannerImgTag.alt = bannerApiData[startIndex].title;
     }
-  }, 1000);
+  };
+
+  // 타이머 만들기
+  let bannerTimer: number = setInterval(bannerChange, 1000);
 
   // 마우스 커서 배너 제어하기
-  bannerAnchorTag!.addEventListener("mouseenter", function () {
+  bannerAnchorTag!.addEventListener("mouseenter", (): void => {
     // 배너 타이머 지우기
     clearInterval(bannerTimer);
   });
-  bannerAnchorTag!.addEventListener("mouseleave", function () {
+  bannerAnchorTag!.addEventListener("mouseleave", (): void => {
     // 배너 타이머 다시 실행
     clearInterval(bannerTimer);
-    bannerTimer = setInterval(function () {
-      startIndex = startIndex + 1;
-      if (startIndex >= totalCount) {
-        startIndex = 0;
-      }
-      bannerAnchorTag!.href = bannerApiData[startIndex].link;
-      bannerImgTag!.src = bannerApiData[startIndex].image;
-      bannerImgTag!.alt = bannerApiData[startIndex].title;
-    }, 1000);
+    bannerTimer = setInterval(bannerChange, 1000);
   });
 });

@@ -1,8 +1,6 @@
-console.log("header.js 코드 실행");
-
 // html 의 태그구조를 모두 읽어들였다면 그때 찾아라.
 // 아래 구문 외워야 하나요?
-window.addEventListener("DOMContentLoaded", function () {
+window.addEventListener("DOMContentLoaded", (): void => {
   // 상단 영역
   const headerTop: Element | null = document.querySelector(".header_top");
   // 로고
@@ -24,7 +22,7 @@ window.addEventListener("DOMContentLoaded", function () {
   const mobileHeader: Element | null = document.querySelector(".mobile_header");
 
   // 웹브라우저의 스크롤을 체크하겠다.
-  window.addEventListener("scroll", function () {
+  window.addEventListener("scroll", (): void => {
     //스크롤바의 최상단
     const scY = window.scrollY;
     if (scY > 0) {
@@ -35,11 +33,11 @@ window.addEventListener("DOMContentLoaded", function () {
       search?.classList.add("search_scroll");
       linkSite?.classList.add("link_site_hide");
       //메인메뉴 class 추가
-      mainMenuA.forEach(function (item) {
+      mainMenuA.forEach((item: Element): void => {
         item.classList.add("height_62");
       });
       //회원메뉴 class 추가
-      memberMenuA.forEach(function (item) {
+      memberMenuA.forEach((item: Element): void => {
         item.classList.add("height_62");
       });
 
@@ -52,10 +50,10 @@ window.addEventListener("DOMContentLoaded", function () {
       search?.classList.remove("search_scroll");
       linkSite?.classList.remove("link_site_hide");
 
-      mainMenuA.forEach(function (item) {
+      mainMenuA.forEach((item: Element): void => {
         item.classList.remove("height_62");
       });
-      memberMenuA.forEach(function (item) {
+      memberMenuA.forEach((item: Element): void => {
         item.classList.remove("height_62");
       });
       mobileHeader?.classList.remove("mobile_scroll_line");
