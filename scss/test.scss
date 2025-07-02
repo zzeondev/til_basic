@@ -3,12 +3,13 @@
 
 .wrap {
   position: relative;
-  //misin 사용
+  // mixin 사용
   @include flex-center;
 
   // 변수 사용하기
   width: $width-screen;
   .header {
+    // mixin 사용
     @include flex-center;
     // 변수 사용하기
     width: $width-screen;
@@ -20,6 +21,7 @@
     }
   }
   .main {
+    @include border-fn(#ffffff);
     // 변수 사용하기
     width: $width-screen;
   }

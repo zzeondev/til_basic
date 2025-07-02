@@ -14,14 +14,14 @@ window.addEventListener("DOMContentLoaded", () => {
   // 메인메뉴 a 태그들 : 여러 개
   const mainMenuA = document.querySelectorAll(".main_menu li a");
   // 멤버메뉴 a 태그들 : 여러 개
-  const memberMenuA = document.querySelectorAll(".member_menu li a");
+  const memberMenuA = this.document.querySelectorAll(".member_menu li a");
 
   // 모바일 메뉴 참조
-  const mobileHeader = document.querySelector(".mobile_header");
+  const mobileHeader = this.document.querySelector(".mobile_header");
 
   // 웹브라우저의 스크롤을 체크하겠다.
   window.addEventListener("scroll", () => {
-    //스크롤바의 최상단
+    // 스크롤바의 최상단
     const scY = window.scrollY;
     if (scY > 0) {
       // console.log("스크롤되었다.");
@@ -30,11 +30,11 @@ window.addEventListener("DOMContentLoaded", () => {
       sale.classList.add("sale_hide");
       search.classList.add("search_scroll");
       linkSite.classList.add("link_site_hide");
-      //메인메뉴 class 추가
+      // 메인메뉴 class 추가
       mainMenuA.forEach((item) => {
         item.classList.add("height_62");
       });
-      //회원메뉴 class 추가
+      // 회원메뉴 class 추가
       memberMenuA.forEach((item) => {
         item.classList.add("height_62");
       });
@@ -54,6 +54,7 @@ window.addEventListener("DOMContentLoaded", () => {
       memberMenuA.forEach((item) => {
         item.classList.remove("height_62");
       });
+
       mobileHeader.classList.remove("mobile_scroll_line");
     }
   });

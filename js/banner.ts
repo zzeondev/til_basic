@@ -8,7 +8,7 @@ window.addEventListener("DOMContentLoaded", (): void => {
     image: string;
     alt: string;
   };
-  const apiData: Array<BannerDataType> = [
+  const apiData: BannerDataType[] = [
     {
       id: 2,
       link: "#",
@@ -59,8 +59,8 @@ window.addEventListener("DOMContentLoaded", (): void => {
   const bannerPos: Element | null = document.querySelector(
     ".sw_banner .swiper-wrapper"
   );
-  // 아래 코드는 별도로 작성을 한 것입니다. (보관)
-  const banner = document.querySelector(".sw_banner");
+  // 아래 코드는 별도로 작성을 한 것입니다. (보관 권장)
+  const banner: Element | null = document.querySelector(".sw_banner");
 
   // html 태그 만들기
   // 6개 만들기
@@ -69,13 +69,12 @@ window.addEventListener("DOMContentLoaded", (): void => {
   function makeHtml(): void {
     for (let i: number = 0; i < total; i++) {
       const tempData: BannerDataType = apiData[i];
-      htmlTag += `
-    <div class="swiper-slide">
-    <a href="${tempData.link}" class="banner_slide_item">
-        <img src="${tempData.image}" alt="${tempData.alt}" />
-    </a>
-</div>
-    `;
+
+      htmlTag += `<div class="swiper-slide">
+                    <a href="${tempData.link}" class="banner_slide_item">
+                        <img src="${tempData.image}" alt="${tempData.alt}" />
+                    </a>
+                </div>`;
     }
     // html 장소에 배치하기
     if (bannerPos) {
@@ -83,7 +82,7 @@ window.addEventListener("DOMContentLoaded", (): void => {
     }
   }
   // 슬라이드 만들기
-  function makeSlied(): any {
+  function makeSlide(): any {
     const swiper: any = new Swiper(".sw_banner", {
       slidesPerView: 1,
       spaceBetween: 25,
@@ -112,7 +111,7 @@ window.addEventListener("DOMContentLoaded", (): void => {
   }
 
   makeHtml();
-  const swiper = makeSlied();
+  const swiper = makeSlide();
 
   // 배너 영역에 마우스가 걸친다면
   banner!.addEventListener("mouseenter", () => {

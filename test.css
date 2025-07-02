@@ -1,6 +1,7 @@
 .ticket {
   padding-top: 60px;
   position: relative;
+  border-top: 8px solid #f0f4f4;
 }
 .layout {
   position: relative;
@@ -230,7 +231,6 @@
 @media all and (max-width: 1024px) {
   .ticket {
     padding-top: 20px;
-    border-top: 8px solid #f0f4f4;
   }
   .ticket_header {
     padding-bottom: 15px;
@@ -263,7 +263,6 @@
   }
   .ticket_footer {
     padding-top: 0;
-    padding-bottom: 20px;
   }
 }
 @media all and (max-width: 960px) {

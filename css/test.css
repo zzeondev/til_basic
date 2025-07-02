@@ -17,6 +17,7 @@
   width: 760px;
 }
 .wrap .main {
+  border: 5px solid #ffffff;
   width: 1420px;
 }
 .wrap .footer {

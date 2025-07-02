@@ -1,31 +1,31 @@
 # 1. 웹퍼블리싱 개발 환경 설정
 
-- 회사에서 당황하지 않고 업무환경 설정이 가능하셔야 합니다.
+- 회사에서 당황하지 않고 `업무환경 설정이 가능`하셔야 합니다.
 - 아래 순서대로 퍼블리싱 셋팅하시면 문제없이 진행됩니다.
 - 추천 프로그램
-  -Byeond Compare 코드 비교 도구 (상용버전)
-  - https://www.scootersoftware.com
+  - Byeond Compare 코드 비교 도구 (상용버전 : 개인적 판단)
+    - https://www.scootersoftware.com
 
-## 1.1 Node.js 설치
+## 1.1. Node.js 설치
 
 - [node.js](https://nodejs.org/ko)
-- Node.js는 로컬PC 및 서버PC 에서 JS 를 실행하는 환경 구성.
+- Node.js 는 로컬PC 및 서버PC 에서 JS 를 실행하는 환경 구성.
 
   - 서버는 대표적으로 웹 서버(PC), 데이터베이스 서버(PC) 등이 있음.
   - 서버는 고객들이 인터넷으로 접속해서 자료를 사용하는 PC
 
 - 추후 React 에서 `NVM(Node Version Manage)` 을 통한 관리 예정
 
-## 1.2 VSCode 설치
+## 1.2. VSCode 설치
 
-- [VSCode](https://code.visualstudio.com/)
+- [VSCode](https://code.visualstudio.com)
 
 ## 1.3. VSCode Extenstion 설치
 
 - 아래 목록을 위주로 설치 한다.
 
 ```
-- PostCSS Sorting : 추후 설정  (css 코드 순서 정렬 도구 - 설정필요)
+- PostCSS Sorting :  추후 설정 (css 코드 순서정렬 도구 - 설정필요)
 - Auto Colse Tag
 - Auto Rename Tag
 - Bracket Pari Clor DLW
@@ -45,24 +45,24 @@
 ## 1.4. Prettier 셋팅
 
 - 줄맞춤, 들여쓰기, 따옴표, 세미콜론 등에 대한 문서의 포맷(컨벤션)을 맞추어줌
-- 설정 버튼 선택(VSCode의 모서리 왼쪽 아이콘) > setting 메뉴 선택
-  ![Image](https://github.com/user-attachments/assets/6c339195-832e-4444-9f8d-947f818f27f4)
-- 검생내용으로 `format` 으로 작성
-- `Editor:Default Formatter` 설정 (Pretier 선택)
+- 설정 버튼(VSCode의 모서리 왼쪽 아이콘 ) 선택 > Settings 메뉴 선택
+  ![Image](https://github.com/user-attachments/assets/5b819a95-e963-4caf-9a4b-f3bd8597f1bf)
+- 검색내용으로 `format` 으로 작성
+- `Editor:Default Formatter` 설정(Prettier 선택)
 - `Editor:Format On Save` 설정
-  ![Image](https://github.com/user-attachments/assets/eb4294ed-96f7-450d-9acd-c829cafe8741)
+  ![Image](https://github.com/user-attachments/assets/91c4de49-73d3-4fe3-8f36-672ca081eda7)
 - VSCode 재실행 추천합니다.
 
 # 2. 웹퍼블리싱 개발 구조 설정
 
 - 반드시 프로젝트명은 `영어소문자`, `단어_단어` 등의 특수기호 추천
-- git 셋팅먼저 진행 필요 : GitHub 포함해서
+- git 셋팅먼저 진행 필요: GitHub 포함해서
 
 ## 2.1. 추천 폴더 구조
 
 - images 폴더 : 파일명.jpg, 파일명.png, 파일명.gif, 파일명.svg
 
-  - jpt : 사진
+  - jpg : 사진
   - gif : 그림(애니메이션 그림 가능, 배경 투명 가능)
   - png : 사진 + 배경 투명
   - svg : 디지털 숫자(벡터)로 계산해서 그림을 만듦(아이콘, 반응형 등에 적극활용)
@@ -77,7 +77,7 @@
 
 - `index.html` 약속 됨.(파일명 변경 불가 : 엔트리포인트)
 - 부가적으로 index 만 작업하는 이유가 가장 어렵고, 복잡하고, 비주얼 합니다.
-- 단축키 : `! + Tab` 키로 기본형을 생성하자. (반드시 파일 저장 후)
+- 단축키 : `! + tab` 키로 기본형을 생성하자.(반드시 파일 저장 후)
 
 # 3. HTML 태그의 이해
 
@@ -121,27 +121,27 @@
 - div 로 내용을 구분 후 아래 영역은 태그를 변경하기를 추천합니다.
 - `header 태그` : 검색엔진에서 내용을 기대함(로고, 타이틀, 주메뉴, 검색, 회원기능 ...)
 - `main 태그` : 컨텐츠 모음
-- `footer 태그` : 검색엔진에서 내용을 기대함(카피라이터, 주소, 연락처, 사이트 맵 등 ...)
+- `footer 태그` : 검색엔진에서 내용을 기대함(카피라이터, 주소, 연락처, 사이트 맵 ...)
 
-## 3.3 필수 태그
+## 3.3. 필수 태그
 
 ### 3.3.1. a 태그 : anchor
 
-- 현재 웹브라우저 내용 갱신(페이지 이동): `<a href="주소">글자/그림</a>`
-- 웹브라우저 탭 생성(새탭 페이지): `<a href="주소" target="_blank">글자/그림</a>`
+- 현재 웹브라우저 내용 갱신(페이지 이동) : `<a href="주소">글자/그림</a>`
+- 웹브라우저 탭 생성(새탭 페이지) : `<a href="주소" target="_blank">글자/그림</a>`
 
-### 3.3.2. form 태그 : 사용자 입력양식
+### 3.3.2 form 태그 : 사용자 입력양식
 
 - 추천 UI 라이브러리
 
   - shadCN : https://ui.shadcn.com/docs/components
-  - AntDesign : https://ant.design/components/overview/
-  - MUI : https://mui.com/material-ui/all-components/
+  - AntDesign : https://ant.design/components/overview
+  - MUI : https://mui.com/material-ui/all-components
 
 - action 과 method 이해
   - `<form action="백엔드주소"></form>`
-  - `<form action="백엔드주소" method="get"></form>`
-    - 데이터 공개됨: `http://127.0.0.1:5500/good.html?id=iu&pass=1234`
+  - `<form action="백엔드주소" method="get"></form> `
+  - 데이터 공개됨: `http://127.0.0.1:5500/good.html?id=iu&pass=1234`
   - `<form action="백엔드주소" method="post"></form>`
     - 데이터 공개됨: `http://127.0.0.1:5500/good.html`
 - input 태그 예제
@@ -164,7 +164,7 @@
     <button>아이디 중복확인</button>
     <br />
     <br />
-    <label for="useemail">이메일</label> <br />
+    <label for="useremail">이메일</label> <br />
     <input
       type="email"
       id="useremail"
@@ -174,8 +174,8 @@
     />
     <br />
     <br />
-    <label for="userpass"> 비밀번호(6자~16자)</label> <br />
-    <inpit
+    <label for="userpass">비밀번호(6자~16자)</label> <br />
+    <input
       type="password"
       id="userpass"
       name="pwd"
@@ -188,7 +188,7 @@
   </fieldset>
   <!-- 상세정보 -->
   <fieldset>
-    <leged>상세정보</leged>
+    <legend>상세정보</legend>
     <label for="country">국가 선택:</label>
     <select id="country" name="country">
       <option value="kr">한국</option>
@@ -199,18 +199,18 @@
     <br />
     <br />
     <label>성별</label> <br />
-    <input type="radio" id="male" name="gender" valud="male" checked />
+    <input type="radio" id="male" name="gender" value="male" checked />
     <label for="male">남성</label>
-    <input type="radio" id= female" name="gender" value="female" />
+    <input type="radio" id="female" name="gender" value="female" />
     <label for="female">여성</label>
     <br />
     <br />
     <label>취미(다중선택가능)</label> <br />
 
-    <input type="checkbox" id="coding" name="hobby" value="coding" chcecked />
+    <input type="checkbox" id="coding" name="hobby" value="coding" checked />
     <label for="coding">코딩</label>
 
-    <input type="checkbox" id="tour" name="hobby" value="tour" chcecked />
+    <input type="checkbox" id="tour" name="hobby" value="tour" checked />
     <label for="tour">여행</label>
 
     <input type="checkbox" id="music" name="hobby" value="music" checked />
@@ -218,14 +218,14 @@
     <br />
     <br />
     <label for="birthday">생년월일</label> <br />
-    <inout type="date" id="birthday" name="birthday" />
+    <input type="date" id="birthday" name="birthday" />
     <br />
     <br />
     <label for="file">첨부파일</label> <br />
     <input type="file" id="file" name="file" />
     <br />
     <br />
-    <label for="intro">자기소개 : </label> <br />
+    <label for="intro">자기 소개 : </label> <br />
     <textarea
       id="intro"
       name="intro"
@@ -243,38 +243,38 @@
 </form>
 ```
 
-### 3.3.3. ul 태그 : unOrderLists (목록태그)
+### 3.3.3 ul 태그 : unOrderList (목록태그)
 
-- 동일한 형태의 레이아웃이 반복된다면 활용
+- 동일한 형태의 레이아웃이 반복된다면 묶어서 활용
 - 동일한 기능이 반복된다면 묶어서 활용
 
-### 3.3.4. image 태그
+### 3.3.4 image 태그
 
 - 아이콘은 https://react-icons.github.io/react-icons 활용
 - `<img src="이미지경로/파일명.확장자" alt="대체글" />`
 
-### 3.3.5. h태그(Heading)
+### 3.3.5 h 태그(Heading)
 
 - 문서의 타이틀 역할을 함을 표현함.
 - h1 ~ h6 로 구성
 - html 문서에서 h1 은 한번만 사용하기를 권장함.
 - 각 영역별로 h2 도 한번만 사용하기를 권장함.
 
-### 3.3.6. p태그 (Paragraph)
+### 3.3.6 p 태그 (Paragraph)
 
 - 글자로 된 문단작성시 활용
 
-### 3.3.7. br 태그
+### 3.3.7 <br /> 태그
 
 - 한 줄 내림
 
-### 3.3.8. b 태그
+### 3.3.8 <b></b> 태그
 
-- 글자를 굵게 표현함
+- 글자를 굵게 표현함.
 
-### 3.3.9. section 태그
+### 3.3.9 <section></section> 태그
 
-- 시멘틱 태그로서 내용 내용 구역 구분
+- 시멘틱 태그로서 내용 구역 구분
 
 # 4. CSS 의 이해
 
@@ -298,7 +298,7 @@
 - 인라인 css (추후 React 에서는 인라인 방식을 많이 활용함 : css 우선순위 적용)
 
 ```html
-<태그 style=""></태그>
+ <태그 style=""> </태그>
 ```
 
 - style 태그 css (추후 React 에서는 object 방식으로 많이 활용함)
@@ -308,7 +308,7 @@
 <태그></태그>
 ```
 
-- style 파일 link 방식 (추후 React 에서는 많이 활용함 : 파일명.module.css)
+- style 파일 link 방식 (추후 React 에서 많이 활용함 : 파일명.module.css)
 
 ```html
 <link rel="stylesheet" href="경로/파일명.css" />
@@ -331,12 +331,12 @@
 - 하나의 `침범할 수 없는 가로 영역`
 - div, ul, li, h1~h6, p 등등
 - 기본적으로 width: 100%
-- css 의 모든 값을 활용할 수있다.(width, height, margin, padding 등)
+- css 의 모든 값을 활용할 수있다.(width, height, margin, paddding 등)
 
 ### 4.3.2. inline
 
 - 한개의 글자처럼 처리됩니다.
-- width, height, margin, padding 을 적용못함
+- width, height, maring, padding 을 적용못함
 - a, img, span, b, strong 등등
 
 ### 4.3.3. inline-block
@@ -347,14 +347,14 @@
 
 ### 4.3.4. flex
 
-- block 이면서 inline 이면서, 가로 정렬, 세로 정렬, 여백조절이 가능
+- block 이면서 inline 이면서, 가로 정렬, 세로 정렬, 여백조절 가능
 - 가로로 레이아웃 배치시 최적화
 - https://studiomeal.com/archives/197
-- justifity-content, align-items, gap, flex:숫자 등등
+- justify-content, align-items, gap, flex:숫자 등등
 
-### 4.3.5. grid (추후 파악)
+### 4.3.5. grid(추후 파악)
 
-- block 이면서 inline 이면서, 가로 정렬, 세로 정렬, 여백조절이 가능
+- block 이면서 inline 이면서, 가로 정렬, 세로 정렬, 여백조절 가능
 - `표`처럼 레이아웃 배치시 최적화
 - https://studiomeal.com/archives/533
 
@@ -397,7 +397,7 @@
 }
 ```
 
-### 4.5. 글꼴 셋팅하기
+## 4.5. 글꼴 셋팅하기
 
 - 모든 css 및 html 작업전에 결정하여야 합니다.
 - 디자이너 및 기획자에게 문의해야 합니다.
@@ -406,7 +406,7 @@
 
 ### 4.5.1. 구글 웹폰트 활용하기
 
-- https://fonts.google.com
+- https://fonts.google.com/
 
 ### 4.5.2. 눈누 웹폰트 활용하기
 
@@ -452,7 +452,7 @@
 - 대표적으로 아이콘 출력하는 경우 많이 활용
 
 ```html
-<대상> before 내용 after </대상>
+ <대상> before 내용 after </대상>
 ```
 
 ```css
@@ -467,11 +467,11 @@
 ## 4.8. CSS 우선순위 (아주 중요합니다.)
 
 - 어느 css 가 마지막에 적용되는가?
-- 기본 : 태그(작성순서 비교) ===> 클래스(작성순서) ===> 아이디
+- 기본 : 태그(작성순서 비교) ===> 클래스(작성순서 비교) ===> 아이디
 - 범위(`공백`) 선택자 CSS 로 다시 적용된다.
-- 경로(`>`) 선택자 CSS 로 다시 적용된다.ㄴ
+- 경로(`>`) 선택자 CSS 로 다시 적용된다.
 - css 문제해결 : F12 개발자 도구에서 확인(아래에서 윗방향으로 해결)
-- 도저히 해결이 안되면 `!important` 옵션을 사용합니다.
+- 도저히 해결이 안된다면 `!important` 옵션을 사용합니다.
 
 ## 4.9. PostCSS Sorting 설치 및 설정
 
@@ -644,7 +644,7 @@
   }
 ```
 
-## 4.10. 한줄 말 줄임 코드 (...처리)
+## 4.10. 한줄 말 줄임 코드 (... 처리)
 
 ```css
 선택 {
@@ -654,11 +654,11 @@
 }
 ```
 
-## 4.11 Gradient 온라인 도구
+## 4.11. Gradient 온라인 도구
 
 - https://cssgradient.io
 
-## 4.12. 두줄 말 줄임 코드 (...처리)
+## 4.12. 두줄 말 줄임 코드 (... 처리)
 
 ```css
 대상 {
@@ -668,14 +668,15 @@
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
+  word-break: break-all;
 }
 ```
 
 # 5. javaScript 의 이해
 
 - Java 는 객체지향 프로그래밍, javaScript 는 스크립트 프로그래밍
-- 웹브라우저용 js 가 원본인데, v8 엔진만 추출해서 Node.js 만듦
-- PC용 즉, 로컬용 js가 Node.js 입니다.
+- 웹브라우저용 js 가 원본인데, V8 엔진만 추출해서 Node.js 만듦
+- PC용 즉, 로컬용 js 가 Node.js 입니다.
   (DB 제어, 네트워크, 소프트웨어, 앱 개발 등)
 
 ## 5.1. 기본적인 js 의 역할(개인 주관)
@@ -746,7 +747,7 @@ const tag = `<div>나이는 ${age}</div>`;
 
 ```js
 const tag = `<div>안녕</div>`;
-const pos = document.querySelector(".h1");
+const pos = document.querySelector(".hi");
 pos.innerHTML = tag;
 ```
 
@@ -762,7 +763,7 @@ pos.innerHTML = tag;
 ```js
 const 변수명 = 변수값;
 const nickName1 = "홍길동";
-const nickName2 = '홍길동'';
+const nickName2 = "홍길동";
 const nickName3 = `홍길동`;
 ```
 
@@ -776,7 +777,7 @@ const age = 10;
 const height = 180.5;
 ```
 
-### 5.7.3. 블리언(참, 거짓)
+### 5.7.3. 불리언(참, 거짓)
 
 - true, false
 
@@ -794,7 +795,7 @@ const isMember = false;
 let nickName;
 ```
 
-### 5.7.5 null
+### 5.7.5. null
 
 - 개발자가 정말 값이 없다고 명시함.
 
@@ -810,25 +811,25 @@ const isLogin = null;
 
 - 복합데이터 또는 참조형 데이터(Reference Data Type)
 
-## 5.8.1. 배열(Array)
+### 5.8.1. 배열(Array)
 
 - 기호로는 `[]` 사용합니다.
 - 배열은 순서(index)가 중요하므로 순서값 즉, 인덱싱을 관리합니다.
-- 인덱스는 자동으로 0 번부터 `,`마다 증가합니다.
-- `변수명[인덱스변호]` 를 통해서 원하는 값 추출 함.
+- 인덱스는 자동으로 0 번부터 `, `마다 증가합니다.
+- `변수명[인덱스번호]` 를 통해서 원하는 값 추출 함.
 - 배열은 `변수명.length` 가 주어집니다.
 
 ```js
 const arr = [1, 3, "안녕", true, false, null, undefined, symbol];
-arr[3]; // true 추출 (0부터 시작)
-arr.length; // 8 출력
+arr[3]; //  true 추출
+arr.length; // 8  출력
 ```
 
-## 5.8.2. 객체
+### 5.8.2. 객체
 
 ```js
 const obj = {
-  속성명: 1,
+  속성명1: 1,
   속성명2: "과학",
   속성명3: false,
 };
@@ -848,7 +849,7 @@ for (초기값; 조건식; 증감식) {
   // 할일
 }
 
-for(let i = 0; i < 10; i ++>) {
+for (let i = 0; i < 10; i++) {
   console.log(i);
 }
 ```
@@ -862,7 +863,7 @@ for(let i = 0; i < 10; i ++>) {
 if(true 냐 false 냐 조건 판단) {
   // true 면 실행
 }else{
-  // false 면 실행
+   // false 면 실행
 }
 ```
 
@@ -871,7 +872,7 @@ if(true 냐 false 냐 조건 판단) {
 - 대표적인 슬라이드 라이브러리
   - Swiper (https://swiperjs.com)
   - Slick (https://kenwheeler.github.io/slick)
-  - BxSlider (https://bxslider.com)
+  - bxSlider (https://bxslider.com)
 
 ## 6.1. Swiper 슬라이드 사용하는 이유
 
@@ -908,7 +909,6 @@ if(true 냐 false 냐 조건 판단) {
 ### 6.4.2. div 클래스 명에서 절대로 수정하면 안됨
 
 ```html
-<!-- 클래스명 swiper 는 수정 금지 개발자클래스는 변경 가능 -->
 <div class="swiper 개발자클래스">
   <div class="swiper-wrapper">
     <div class="swiper-slide">내용</div>
@@ -937,9 +937,9 @@ window.addEventListener("load", function () {
 ### 6.4.4. 옵션들
 
 - slidesPerView : 화면당 보여줄 슬라이드 수
-- spaceBetween : 슬라이드의 간격 (픽셀단위)
+- spaceBetween : 슬라이드의 간격(픽셀단위)
 - slidesPerGroup : 한번 이동시 몇개의 슬라이드 이동개수
-- breakponints : 웹브라우저 너비(픽셀) 계산 후 슬라이드 배치
+- breakpoints : 웹브라우저 너비(픽셀) 계산 후 슬라이드 배치
 
 ```js
 window.addEventListener("load", function () {
@@ -962,7 +962,7 @@ window.addEventListener("load", function () {
 });
 ```
 
-- 그리드를 이용한 2줄이상 출력하기(인터파크에서)
+- 그리드를 이용한 2줄이상 출력하기(인터파크예제)
 
 ```js
 window.addEventListener("load", function () {
@@ -1001,7 +1001,7 @@ window.addEventListener("load", function () {
 
 - 좌측, 우측 슬라이드 이동
 - 첫 페이지와, 마지막 페이지에서 버튼 숨기기 적용
-- 원본 Swiper 예제의 버튼의 클래스 명을 꼭 알아내서 활용하자.
+- 원본 Swiper 예제의 버튼의 `클래스 명`을 꼭 알아내서 활용하자.
 
 ```css
 .swiper-button-disabled {
@@ -1014,7 +1014,6 @@ navigation: {
       nextEl: ".버튼클래스명",
       prevEl: ".버튼클래스명",
     },
-
 ```
 
 # 7. SCSS
@@ -1027,7 +1026,7 @@ navigation: {
 
 - `scss 폴더` 만들기
 - `scss 폴더/test.scss 파일` 만들기
-- 반드시 VSCode 의 하단 바에 `Watch Sass` 를 `Watching...` 으로
+- 반드시 VSCode 의 하단 바에 `Watch Sass` 를 `Watching...` 으로 선택
 
 ## 7.3. 환경 셋팅
 
@@ -1036,10 +1035,11 @@ navigation: {
 
 ### 환경 설정
 
-![Image](https://github.com/user-attachments/assets/3c4d0a79-2e2a-435f-b0df-ec4f0e49fe71)
+![Image](https://github.com/user-attachments/assets/20fa39d9-7526-4fe3-947b-7fb3f2343b46)
 
-- `settings 메뉴` 선택
-  ![Image](https://github.com/user-attachments/assets/4aa5b45e-a5f4-4568-8cc7-9c48da3c2141)
+- `Settings 메뉴` 선택
+
+![Image](https://github.com/user-attachments/assets/3e398aef-8d0f-4175-89bd-7a809788aa10)
 
 - 다음의 코드를 추가한다.
 
@@ -1058,7 +1058,7 @@ navigation: {
 
 - 참조 : https://www.heropy.dev/p/Y7OrPe
 
-### 7.4.1. 중첩 (Nesting)
+### 7.4.1. 중첩(Nesting)
 
 ```scss
 // 중첩 (Nesting)
@@ -1087,6 +1087,7 @@ navigation: {
     color: orange;
     button {
       border: 1px solid green;
+
       &:hover {
         background-color: red;
       }
@@ -1144,6 +1145,7 @@ $pc-w: 760px;
     // 변수 사용하기
     width: $width-screen;
     .inner {
+      // 변수 사용하기
       width: $pc-w;
     }
   }
@@ -1160,7 +1162,7 @@ $pc-w: 760px;
 
 ### 7.4.3. 변수를 모으고 다른 scss 에서 사용하기
 
-- css 로 생성할 필요가 없는 경우 `_파일명.scss`
+- css 로 생성할 필요가 없는 경우 `_파일명.scss` 생성
 - scss 폴더에 `_val.scss` 파일만듦. (파일명은 자유)
 
 ```scss
@@ -1168,7 +1170,7 @@ $width-screen: 960px;
 $pc-w: 760px;
 ```
 
-- 변수 사용시 `@import "val";` `_`반드시 제거하고 파일명만 적자
+- 변수 사용시 `@import "val";` `_ ` 반드시 제거하고 파일명만 적작
 
 ```scss
 @import "val";
@@ -1226,6 +1228,7 @@ $pc-w: 760px;
   position: relative;
   // mixin 사용
   @include flex-center;
+
   // 변수 사용하기
   width: $width-screen;
   .header {
@@ -1251,3 +1254,56 @@ $pc-w: 760px;
   }
 }
 ```
+
+# 8. 파비콘 및 아이콘 만들기
+
+- https://realfavicongenerator.net
+
+# 9. SEO
+
+- Search Engine Optimization : 검색 엔진 최적화
+- 구글, 네이버 : 검색어를 입력시 관련 순위로 목록 제시함.
+
+## 9.1. 기본적인 SEO 작성 목록
+
+- `<title>타이틀</title>` : 고정된 글자. 검색 결과 타이틀
+- `<meta name="description" content="서비스설명" />` : 요약설명, 검색 결과 내용
+- `<meta name="keyword" content="키워드" /> ` : 핵심 키워드
+- `<meta property="og:title" content="제목" />` : SNS 공유시 표현 제목
+- `<meta property="og:description" content="서비스설명" />` : SNS 공유시 설명
+- `<meta property="og:image" content="https~" />` : 미리보기 이미지 url
+
+## 9.2. 검색 엔진 로봇 을 위한 설정
+
+- `robots.txt` 파일 생성
+
+```txt
+User-agent: *
+Allow: /
+Sitemap: https://til-basic.vercel.app/sitemap.xml
+```
+
+- `sitemap.xml` 파일 생성(기본구조)
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    <url>
+        <loc>https://til-basic.vercel.app</loc>
+        <lastmod>2025-06-27</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://til-basic.vercel.app/ceo</loc>
+        <lastmod>2025-06-27</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.0</priority>
+    </url>
+
+</urlset>
+```
+
+## 9.3 네이버와 구글 검색엔진 등록해 보기

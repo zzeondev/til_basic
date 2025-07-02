@@ -23,7 +23,8 @@
   color: rgba(18, 18, 18, 0.5);
   text-align: center;
 }
-.live_slide_wrap {
+
+.tour_slide_wrap {
   position: relative;
 }
 .live_slide {
@@ -43,7 +44,6 @@
   border-radius: 11px;
   overflow: hidden;
 }
-
 .live_image {
   position: relative;
   width: 100%;
@@ -69,6 +69,7 @@
     linear-gradient(180deg, rgba(0, 0, 0, 0.4) 18.65%, transparent 39.78%),
     linear-gradient(180deg, transparent 56.75%, rgba(0, 0, 0, 0.4) 87.59%);
 }
+
 .live_info {
   position: absolute;
   left: 0;
@@ -148,6 +149,7 @@
   height: 65px;
   border-radius: 2px;
   overflow: hidden;
+  background-color: red;
 }
 .live_detail_image img {
   width: 100%;
@@ -161,6 +163,7 @@
   color: #fff;
   font-size: 15px;
 }
+
 .live_slide_prev {
   display: flex;
   align-items: center;
@@ -211,17 +214,17 @@
   gap: 7px;
   align-items: center;
   justify-content: center;
-  padding: 0 40px;
+  padding: 0px 40px;
 
   border: 1px solid #e5e5e5;
 
   height: 56px;
   background-color: #fff;
+
+  font-size: 16px;
   font-weight: 700;
   color: #333;
   border-radius: 23px;
-
-  font-size: 16px;
 }
 
 @media all and (max-width: 1024px) {

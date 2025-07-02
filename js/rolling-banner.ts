@@ -24,7 +24,6 @@ window.addEventListener("load", (): void => {
   // 롤링 작동하기
   //   console.log("링크주소 : ", bannerAnchorTag.href);
   //   console.log("이미지경로 : ", bannerImgTag.src);
-
   // 방어 코드
   if (bannerAnchorTag) {
     bannerAnchorTag.href = bannerApiData[0].link;

@@ -10,20 +10,21 @@
   position: relative;
 }
 .trip_header_title {
-  /* 중앙 위아래 맞춤 */
   display: flex;
   gap: 10px;
   align-items: center;
   justify-content: center;
 }
+
 .trip_header_text {
   padding-top: 15px;
+  font-size: 18px;
   font-weight: 400;
   color: rgba(18, 18, 18, 0.5);
   text-align: center;
-  font-size: 18px;
 }
-.trip_slide_wrap {
+
+.tour_slide_wrap {
   position: relative;
 }
 .trip_slide {
@@ -35,25 +36,27 @@
   display: block;
   width: 100%;
 }
-
 .trip_image {
   height: 245px;
   border-radius: 11px 11px 0 0;
   overflow: hidden;
 }
+
 .trip_image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
+
 .trip_info {
   position: relative;
   height: calc(100% - 245px);
   padding: 20px 25px;
-  border: 1px solid#f0f0f0;
+  border: 1px solid #f0f0f0;
   border-top: none;
   border-radius: 0 0 11px 11px;
 }
+
 .trip_icon {
   position: absolute;
   left: 16px;
@@ -69,7 +72,7 @@
 
   height: 24px;
   border-radius: 12px;
-  padding: 0 10px;
+  padding: 0px 10px;
 
   background: linear-gradient(
     90deg,
@@ -88,7 +91,7 @@
   font-weight: 400;
   color: #1c1c1e;
 
-  /* 행간 - 기준 폰트 사이즈 (폰트사이즈X숫자*/
+  /* 행간 */
   line-height: 1.6;
 
   /* 2 줄 말줄임 */
@@ -99,22 +102,23 @@
   -webkit-box-orient: vertical;
 }
 .trip_schedule {
-  display: flex;
   font-size: 14px;
   color: #666;
+  display: flex;
   flex-wrap: wrap;
-
+  
   padding: 5px 0;
 }
 .trip_schedule span {
   position: relative;
   padding-right: 11px;
 }
+
 .trip_schedule span::before {
   content: "";
   position: absolute;
-  transform: translateX(-5px);
   right: 0;
+  transform: translateX(-5px);
   top: 50%;
   width: 2px;
   height: 2px;
@@ -139,6 +143,7 @@
   color: #999;
   font-size: 13px;
 }
+
 .trip_slide_prev {
   display: flex;
   align-items: center;
@@ -158,9 +163,9 @@
 }
 
 .trip_slide_prev img {
-  /* 180도 반전 */
   transform: rotate(180deg);
 }
+
 .trip_slide_next {
   display: flex;
   align-items: center;
@@ -181,38 +186,39 @@
 .trip_footer {
   display: flex;
   justify-content: center;
-  padding-top: 20px;
+  padding: 20px 0;
   position: relative;
 }
 .trip_more_bt {
-  /* a 태그는 인라인이라 디스플레이해야 너비높이가 들어감*/
   display: flex;
   gap: 7px;
   align-items: center;
   justify-content: center;
-  padding: 0 40px;
+  padding: 0px 40px;
 
   border: 1px solid #e5e5e5;
 
   height: 56px;
   background-color: #fff;
+
+  font-size: 16px;
   font-weight: 700;
   color: #333;
   border-radius: 23px;
-
-  font-size: 16px;
 }
-
 /* 반응형 */
 @media all and (max-width: 1280px) {
 }
+
 @media all and (max-width: 1080px) {
 }
+
 @media all and (max-width: 1024px) {
   .trip {
     border-top: 8px solid #f0f4f4;
     padding-top: 30px;
   }
+
   .trip_header {
     padding-bottom: 15px;
   }
@@ -225,15 +231,17 @@
   .trip_header_title img:last-child {
     width: 25px;
   }
+
   .trip_header_text {
     font-size: 15px;
     padding-top: 10px;
   }
-  /* 트릭 swiper 의 visivile 속성 바꿈 */
+  /* 트릭  swiper 의 visibile 속성 바꿈 */
   .sw_trip {
     overflow: visible !important;
   }
-  /* 트릭 swiper 의 너비를 강제 조절 */
+
+  /* 트릭  swiper 의 너비 강제 조절 */
   .sw_trip .swiper-slide {
     width: 230px !important;
   }
@@ -243,7 +251,7 @@
   }
   .trip_info {
     padding: 15px;
-    padding-bottom: 13px;
+    padding-bottom: 12px;
   }
   .trip_item_title {
     font-size: 15px;
@@ -264,9 +272,10 @@
     display: none;
   }
   .trip_footer {
-    padding: 20px 0;
+    padding-top: 12px;
   }
 }
+
 @media all and (max-width: 960px) {
 }
 @media all and (max-width: 760px) {

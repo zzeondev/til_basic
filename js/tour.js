@@ -131,22 +131,22 @@ window.addEventListener("load", function () {
   for (let i = 0; i < tourDataArr.length; i++) {
     const tag = `
     <div class="swiper-slide">
-                <a href="#" class="tour_item">
-                <div class="tour_item_image">
-                    <img
-                    src="${tourDataArr[i].image}"
-                    alt="${tourDataArr[i].alt}"
-                    />
-                </div>
-                <div class="tour_item_info">
-                    <p class="tour_city">${tourDataArr[i].city}</p>
-                    <p class="tour_sale">${tourDataArr[i].sale}</p>
-                    <p class="tour_item_title">${tourDataArr[i].title}</p>
-                    <p class="tour_price"><b>${tourDataArr[i].price}</b>원~</p>
-                </div>
-                </a>
+        <a href="#" class="tour_item">
+            <div class="tour_item_image">
+                <img
+                src="${tourDataArr[i].image}"
+                alt="${tourDataArr[i].alt}"
+                />
             </div>
-    `;
+            <div class="tour_item_info">
+                <p class="tour_city">${tourDataArr[i].city}</p>
+                <p class="tour_sale">${tourDataArr[i].sale}</p>
+                <p class="tour_item_title">${tourDataArr[i].title}</p>
+                <p class="tour_price"><b>${tourDataArr[i].price}</b>원~</p>
+            </div>
+        </a>
+    </div>
+        `;
 
     htmlTag = htmlTag + tag;
   }
@@ -157,7 +157,6 @@ window.addEventListener("load", function () {
     slidesPerView: 3,
     grid: {
       rows: 2,
-      fill: "row",
     },
     spaceBetween: 10,
     slidesPerGroup: 1,
@@ -169,7 +168,7 @@ window.addEventListener("load", function () {
 
     // 반응형
     breakpoints: {
-      1025: {
+      1024: {
         slidesPerView: 2,
         slidesPerGroup: 2,
         spaceBetween: 26,

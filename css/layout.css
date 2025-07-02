@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  /* 컨텐츠 마다 선택사항 위에는 필수 */
+  /* 컨텐츠 마다 선택사항 */
   outline-style: none;
   box-sizing: border-box;
 }
@@ -17,6 +17,7 @@ a {
 html {
   overflow-x: hidden;
 }
+
 .wrap {
 }
 
@@ -26,4 +27,5 @@ body {
   font-size: 16px;
   font-weight: 400;
   line-height: 1.3;
+  overflow-x: hidden;
 }

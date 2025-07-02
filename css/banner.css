@@ -32,7 +32,6 @@
   justify-content: center;
 
   border: 1px solid #e5e5e5;
-
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.13);
   position: absolute;
   top: 50%;
@@ -59,7 +58,6 @@
   justify-content: center;
 
   border: 1px solid #e5e5e5;
-
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.13);
   position: absolute;
   top: 50%;
@@ -90,11 +88,13 @@
   .banner_slide_item {
     height: 202px;
   }
-  /* 다중으로 선택함(,로 구분함) */
+
+  /* 다중으로 선택함 ( , 로 구분함)  */
   .banner_slide_next,
   .banner_slide_prev {
     display: none;
   }
+
   /* 페이지네이션이 보여야 함. */
   .banner_slide_pg {
     display: flex;

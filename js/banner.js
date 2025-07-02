@@ -49,7 +49,7 @@ window.addEventListener("DOMContentLoaded", () => {
   const total = apiData.length;
   // 슬라이드 배치 장소
   const bannerPos = document.querySelector(".sw_banner .swiper-wrapper");
-  // 아래 코드는 별도로 작성을 한 것입니다. (보관)
+  // 아래 코드는 별도로 작성을 한 것입니다. (보관 권장)
   const banner = document.querySelector(".sw_banner");
 
   // html 태그 만들기
@@ -61,12 +61,11 @@ window.addEventListener("DOMContentLoaded", () => {
     for (let i = 0; i < total; i++) {
       htmlTag =
         htmlTag +
-        `
-    <div class="swiper-slide">
-    <a href="${apiData[i].link}" class="banner_slide_item">
-        <img src="${apiData[i].image}" alt="${apiData[i].alt}" />
-    </a>
-</div>
+        `<div class="swiper-slide">
+            <a href="${apiData[i].link}" class="banner_slide_item">
+                <img src="${apiData[i].image}" alt="${apiData[i].alt}" />
+            </a>
+        </div>
     `;
     }
     // html 장소에 배치하기

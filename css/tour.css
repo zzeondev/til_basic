@@ -41,7 +41,6 @@
   gap: 6px;
 }
 .tour_button_list li {
-  display: block;
 }
 .tour_button_list li button {
   padding: 0 18px;
@@ -54,9 +53,11 @@
 
   white-space: nowrap;
 }
+
 .tour_button_list li button:active {
   opacity: 0.65;
 }
+
 .tour_focus {
   background-color: #333 !important;
   font-weight: 600;
@@ -96,7 +97,6 @@
   border: 1px solid #f0f0f0;
   border-top: none;
   position: relative;
-  /* 전체높이에서 픽셀을 뺌 */
   height: calc(100% - 255px);
   border-radius: 0px 0px 12px 12px;
 }
@@ -111,13 +111,14 @@
   transform: translateY(-50%);
   border-radius: 4px;
 }
+
 .tour_item_info .tour_sale {
   font-size: 15px;
   font-weight: 400;
   color: rgb(65, 84, 255);
 }
-/* 한줄 말줄임 ...은 css 작업합니다 */
-/* 한줄 이상 말줄임 ...은 css 작업합니다 */
+
+/* 한줄 말줄임 ... 은 css 작업합니다. */
 .tour_item_info .tour_item_title {
   /* 아래는 보관해 두세요. */
   overflow: hidden;
@@ -151,10 +152,10 @@
   transform: translateY(-50%) translateX(-50%);
   border-radius: 24px;
 }
-/* 위치는 그대로 내용만 반전 */
 .tour_slide_prev img {
   transform: rotate(180deg);
 }
+
 .tour_slide_next {
   border: 1px solid #e5e5e5;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.13);
@@ -167,7 +168,6 @@
   height: 48px;
   background-color: rgba(255, 255, 255, 0.5);
   cursor: pointer;
-  /* translate (X, Y) */
   transform: translateY(-50%) translateX(50%);
   border-radius: 24px;
 }
@@ -175,20 +175,18 @@
   display: flex;
   justify-content: center;
   padding-top: 50px;
-  /* inline 요소(=글자처럼 취급)를 가운데 정렬할 때는 text-align:center 또는
-    display:flex; justify-contents:center 아래처럼 필요에 의해서 모두 쓰기도 함*/
-  text-align: center;
 }
 .tour_more_bt {
   display: flex;
-  /* 사이에 여백 gap */
   gap: 7px;
   align-items: center;
   padding: 0 20px;
 
   border: 1px solid #e5e5e5;
+
   height: 56px;
   background-color: #fff;
+
   font-size: 16px;
   font-weight: 700;
   color: #333;
@@ -208,13 +206,14 @@
   }
   .layout {
     max-width: 760px;
-    padding: 0 20px;
+    padding: 0px 20px;
     overflow: hidden;
   }
   .tour_top {
     padding-top: 10px;
     padding-bottom: 13px;
   }
+
   .tour_top_title .title {
     font-size: 20px;
   }
@@ -222,13 +221,21 @@
     font-size: 15px;
     margin-bottom: 10px;
   }
+
   .tour_button_list li button {
     height: 38px;
   }
-  /*  swiper 소스 고친 트릭 */
+
+  /* swiper 소스 고친 트릭 */
   .sw_tour {
     overflow: visible !important;
   }
+
+  /* swipe 트릭 강제로 height 지정 */
+  .sw_tour .swiper-wrapper {
+    height: 462px;
+  }
+
   /* swiper 트릭 강제로 slide 너비를 고정 시킴 */
   .sw_tour .swiper-slide {
     width: 230px !important;
@@ -252,8 +259,6 @@
     text-overflow: ellipsis;
     white-space: nowrap;
   }
-  .tour_item .tour_item_title {
-  }
   .tour_item_info .tour_price {
     font-size: 14px;
   }
@@ -269,6 +274,7 @@
     padding-bottom: 20px;
   }
 }
+
 @media all and (max-width: 960px) {
 }
 @media all and (max-width: 760px) {
